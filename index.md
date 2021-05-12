@@ -1,6 +1,8 @@
-## HTML and CSS
+## Web Pages
 
 ### HTML
+
+HTML is the basic markup browsers use to display documents:
 
 ```html
 <!DOCTYPE html>
@@ -8,40 +10,66 @@
   <head>
     <title>Page Title</title>
   </head>
-  <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+  <body class="news-feed-page">
+    <h1>News feed</h1>
+    <div class="article">
+        <div class="title">Some Great News</div>
+        <div class="date">April 25, 2021</div>
+        <div class="author">Joe Brody</div>
+    </div>
   </body>
 </html>
+```
+### CSS
 
+CSS is a stylesheet used to reference HTML elements and define their style.
+SCSS/SASS is used to add functionality to the CSS language
+
+```scss
+.news-feed-page {
+  h1 {
+    font-size: 2rem;
+  }
+  .article {
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .date {
+      color: darkslategray;
+    }
+    .author {
+      color: darkslategray;
+      font-style: italic;
+    }
+  }
+}
 ```
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### JavaScript
 
-```markdown
-Syntax highlighted code block
+JavaScript is a scripting language that the browser can run.
+It is limited in access to the host system by the browser, but it can access
+the DOM (HTML elements) as well as various browser APIs like location.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+An example of JavaScript interacting with the DOM:
+```javascript
+<div id="title">Some News<div>
+<button
+    onclick='document.getElementById("title").innerHTML = "Some Great News"'>
+    Make it Better
+</button>
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/saaryab/intro-to-react/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+A plain JavaScript function:
+```javascript
+<script>
+    function factorial(num) {
+        if (num < 0) return -1; // invalid input
+        if (num === 0) return 1;
+        return num * factorial(num - 1);
+    }
+    
+    const myFactorial = factorial(5);
+    console.log(myFactorial);
+</script>
+```
