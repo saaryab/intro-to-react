@@ -1,10 +1,20 @@
-## Welcome to GitHub Pages
+## HTML and CSS
 
-You can use the [editor on GitHub](https://github.com/saaryab/intro-to-react/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### HTML
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
 
-### Markdown
+```
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
